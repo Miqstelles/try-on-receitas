@@ -4,13 +4,18 @@ import Content from './components/Content';
 import Content2 from './components/Content-2';
 import Footer from './components/Footer';
 
+import { firestore } from './firebase';
+import { addDoc, collection, orderBy } from "@firebase/firestore";
+
+const ref = collection(firestore, "receitas");
+console.log(ref);
+
 function App() {
   return (
-    <div className="w-screen h-screen bg-brown-300">
+    <div className="w-screen h-screen bg-brown-300 overflow-x-hidden">
       <header>
         <Navbar />
       </header>
-
       <Caroulsel />
       <div className="h-[430px] flex justify-center bg-brown-100 drop-shadow-lg">
         <Content />
