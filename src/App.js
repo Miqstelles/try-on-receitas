@@ -3,12 +3,7 @@ import Navbar from './components/Navbar'
 import Content from './components/Content';
 import Content2 from './components/Content-2';
 import Footer from './components/Footer';
-
-import { firestore } from './firebase';
-import { addDoc, collection, orderBy } from "@firebase/firestore";
-
-const ref = collection(firestore, "receitas");
-console.log(ref);
+import FooterMobile from './components/FooterMobile';
 
 function App() {
   return (
@@ -17,11 +12,14 @@ function App() {
         <Navbar />
       </header>
       <Caroulsel />
-      <div className="h-[430px] flex justify-center bg-brown-100 drop-shadow-lg">
+      <div className="h-[350px] sm:h-[430px] flex justify-center bg-brown-100 drop-shadow-lg">
         <Content />
       </div>
-      <div className="h-[730px]  flex justify-center bg-brown-300">
+      <div className="h-[730px]  justify-center hidden sm:flex">
         <Content2 />
+      </div>
+      <div className="h-[120px] justify-center flex sm:hidden">
+        <FooterMobile />
       </div>
       <footer>
         <Footer />

@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <div className='w-screen h-[140px] z-10 bg-brown-100 drop-shadow-lg'>
             <div className="flex justify-around items-center w-full h-full">
-                <div className="flex items-center">
+                <div className="hidden sm:flex items-center">
                     <h1 className="text-lg text-little-black font-bold mr-4 sm:text-3xl pl-[100px] hover:text-black"><a href="">Try On</a></h1>
                     <a href=""><img className="w-[90px] h-[63px]" src={logoImg} alt="" /></a>
                     <div className="">
@@ -29,7 +29,7 @@ const Footer = () => {
                         </h3>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="hidden sm:flex">
                     <a href="">
                         <div className="w-[80px] h-[80px] rounded-full bg-brown-500 hover:shadow-lg transition duration-500">
                             <div className="p-[20px]">
